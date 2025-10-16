@@ -17,6 +17,12 @@ def generate_launch_description():
         ]
     )
 
+    # Use SmartNeedle interface
+    dummy_smart_needle_interface = Node(
+        package = "trajcontrol",
+        executable = "dummy_smart_needle_interface",
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument(
             "mode",
@@ -38,5 +44,6 @@ def generate_launch_description():
             description = "OpenIGTLBridge IP address"
         ),
         actions.LogInfo(msg = ["ip: ", LaunchConfiguration('ip')]),        
-        igtl_bridge
+        igtl_bridge,
+        dummy_smart_needle_interface
     ])
