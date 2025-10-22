@@ -63,17 +63,17 @@ void OpenIGTLinkNode::addConverters()
 
 // Change from slicer_manual_mod original commit. Date of change: 10/20/2025 9 AM EST
   
-  RIBConverterTransform* transform = new RIBConverterTransform;
+  // RIBConverterTransform* transform = new RIBConverterTransform;
   RIBConverterString* string = new RIBConverterString;
   RIBConverterPointArray * pointarray = new RIBConverterPointArray;
-  RIBConverterPoseArray * posearray = new RIBConverterPoseArray;
+  //  RIBConverterPoseArray * posearray = new RIBConverterPoseArray;
   // RIBConverterImage* image = new RIBConverterImage;
   // RIBConverterPolyData* polydata = new RIBConverterPolyData;
 
   this->converterManager->AddConverter(string, 10, "IGTL_STRING_IN", "IGTL_STRING_OUT");
-  this->converterManager->AddConverter(transform, 10, "IGTL_TRANSFORM_IN", "IGTL_TRANSFORM_OUT");
+  // this->converterManager->AddConverter(transform, 10, "IGTL_TRANSFORM_IN", "IGTL_TRANSFORM_OUT");
   this->converterManager->AddConverter(pointarray, 10, "IGTL_POINT_IN", "IGTL_POINT_OUT");
-  this->converterManager->AddConverter(posearray, 10, "IGTL_POSEARRAY_IN", "IGTL_POSEARRAY_OUT");
+  // this->converterManager->AddConverter(posearray, 10, "IGTL_POSEARRAY_IN", "IGTL_POSEARRAY_OUT");
   // this->converterManager->AddConverter(image, 10, "IGTL_IMAGE_IN", "IGTL_IMAGE_OUT");
   //this->converterManager->AddConverter(polydata, 10, "IGTL_POLYDATA_IN", "IGTL_POLYDATA_OUT");
 
